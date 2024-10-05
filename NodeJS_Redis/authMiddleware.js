@@ -1,11 +1,5 @@
 // authMiddleware.js
 function authMiddleware(req, res, next) {
-
-  if ( true ) {
-    next();
-  } else {
-
-  
     const authHeader = req.headers['authorization'];
   
     if (!authHeader) {
@@ -22,7 +16,6 @@ function authMiddleware(req, res, next) {
     } else {
       res.status(403).send('Invalid token');
     }
-  }
   }
   
   module.exports = authMiddleware;
